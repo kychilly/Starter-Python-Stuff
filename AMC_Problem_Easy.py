@@ -6,3 +6,12 @@ def solveProblem():
                 print(i + p)
 
 solveProblem()
+
+def solveSecondProblem():
+    workingNumbers = []
+    for i in range(50):
+        if i**i % 5 == 0:
+            workingNumbers.append(i)
+    print(workingNumbers)
+
+solveSecondProblem()
