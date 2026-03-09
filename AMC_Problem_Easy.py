@@ -15,3 +15,17 @@ def solveSecondProblem():
     print(workingNumbers)
 
 solveSecondProblem()
+
+def solveThirdProblem() -> int:
+    n = 0
+    for i in range(2,10):
+        for p in range(2,10):
+            for f in range(2,10):
+                if .99 < (1.0/i + 1.0/p + 1.0/f):
+                    if 1.01 > (1.0/i + 1.0/p + 1.0/f):
+                        n += 1
+
+
+    return n
+
+print(solveThirdProblem())
