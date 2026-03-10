@@ -59,7 +59,7 @@ def solveFourthProblem() -> float:
 
     return n
 
-print(solveFourthProblem())
+#print(solveFourthProblem())
 
 def solveFifthProblem() -> float:
     sum = 0
@@ -69,3 +69,33 @@ def solveFifthProblem() -> float:
     return sum
 
 print(solveFifthProblem())
+
+#/*
+    # //Roger abhors doing his homework. He starts with 3 questions to do, denoted c = 3,
+    # //and he finishes when c = 0. However, he also starts with a spite value of s = 1.
+    # //Given s, the probability of him getting his next question correct is 2 / (s + 2).
+    # //If he gets it right, c decreases by 1. If not, his spite increases by 1, and he hates
+    # //the world just a little bit more. On average, how many attempts will it take for him
+    # //to complete the homework?
+    # //
+    # //Question taken from the Gunn Math Competition.
+    # */
+    # //make trials 1000
+def solveSixthProblem(c = int) -> int:
+    attempts = 0
+    spite = 1
+    while c > 0:
+        attempts += 1
+        if random.random() < (2/(spite+2)):
+            c -= 1
+        else:
+            spite += 1
+    return attempts
+
+def simulateSixthProblem(c: int, trials: int) -> float:
+    attempts = 0
+    for i in range(trials):
+        attempts += solveSixthProblem(c)
+    return attempts/trials
+
+print(simulateSixthProblem(3,1000))
