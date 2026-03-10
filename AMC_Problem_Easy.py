@@ -1,3 +1,4 @@
+import math
 import random
 
 def solveProblem():
@@ -60,3 +61,11 @@ def solveFourthProblem() -> float:
 
 print(solveFourthProblem())
 
+def solveFifthProblem() -> float:
+    sum = 0
+    for i in range(2,10):
+        sum += math.pow(i+1,2) - math.pow(i,2)
+        i += 1
+    return sum
+
+print(solveFifthProblem())
