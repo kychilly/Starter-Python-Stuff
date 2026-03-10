@@ -1,3 +1,5 @@
+import random
+
 def solveProblem():
     for i in range(10):
         for p in range(10):
@@ -29,3 +31,32 @@ def solveThirdProblem() -> int:
     return n
 
 print(solveThirdProblem())
+
+def solveFourthProblem() -> float:
+    n = 0
+    gender = [0,0]
+    listy = []
+    for i in range(20):
+        if random.randint(0,1) == 0:
+            listy.append(True)
+            gender[0] += 1
+        else:
+            listy.append(False)
+            gender[1] += 1
+    while gender[0] != 0 and gender[1] != 0:
+        n += 1
+        if listy.pop(0):
+            gender[0] -= 1
+        else:
+            gender[1] -= 1
+        if random.randint(0,1) == 0:
+            listy.append(True)
+            gender[0] += 1
+        else:
+            listy.append(False)
+            gender[1] += 1
+
+    return n
+
+print(solveFourthProblem())
+
