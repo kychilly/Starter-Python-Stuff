@@ -117,3 +117,21 @@ def simulateSeventhProblem(n: int):
             return times
 print(simulateSeventhProblem(10))
 
+# average proportion to go 6-7 in valorant
+def simulateEigthProblem(trials : int) -> float:
+    SixSevens = 0
+    NotSixSevens = 0
+    for p in range(trials):
+        listy = [0,0]
+        for i in range(13):
+            if random.random() <= .5:
+                listy[0] += 1
+            else:
+                listy[1] += 1
+        if listy[0] == 6 and listy[1] == 7:
+            SixSevens += 1
+        else:
+            NotSixSevens += 1
+    return (SixSevens/(SixSevens+NotSixSevens))
+
+print (simulateEigthProblem(100000))
