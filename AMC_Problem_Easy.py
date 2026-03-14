@@ -99,3 +99,21 @@ def simulateSixthProblem(c: int, trials: int) -> float:
     return attempts/trials
 
 print(simulateSixthProblem(3,1000))
+
+def simulateSeventhProblem(n: int):
+    times = 0
+    listy = []
+    for i in range(n):
+        listy.append(False)
+    while True:
+        times += 1
+        rand = random.randint(0,n-1)
+        listy[rand] = True
+        works = True
+        for i in range(0,n):
+            if listy[i] == False:
+                works = False
+        if (works == True):
+            return times
+print(simulateSeventhProblem(10))
+
