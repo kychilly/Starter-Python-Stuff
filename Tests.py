@@ -73,3 +73,21 @@
 # jList = [i*i for i in iList]
 # print(iList)
 # print(jList)
+
+# Tuples
+# Use these for data protection and faster
+# aTuple = ("banana", 50, "yellow")
+# color1 = aTuple[-1]
+# print(aTuple)
+# print(color1)
+# name, calories, color = aTuple
+# print(name, calories, color)
+# for i in aTuple:
+#     print(i)
+
+# Dictionaries
+dictionary = {
+    "name": "Kevin",
+    "age": 17
+}
+

@@ -15,7 +15,7 @@ def solveSecondProblem():
     for i in range(50):
         if i**i % 5 == 0:
             workingNumbers.append(i)
-    print(workingNumbers)
+    #print(workingNumbers)
 
 solveSecondProblem()
 
@@ -31,7 +31,7 @@ def solveThirdProblem() -> int:
 
     return n
 
-print(solveThirdProblem())
+#print(solveThirdProblem())
 
 def solveFourthProblem() -> float:
     n = 0
@@ -68,7 +68,7 @@ def solveFifthProblem() -> float:
         i += 1
     return sum
 
-print(solveFifthProblem())
+#print(solveFifthProblem())
 
 #/*
     # //Roger abhors doing his homework. He starts with 3 questions to do, denoted c = 3,
@@ -98,7 +98,7 @@ def simulateSixthProblem(c: int, trials: int) -> float:
         attempts += solveSixthProblem(c)
     return attempts/trials
 
-print(simulateSixthProblem(3,1000))
+#print(simulateSixthProblem(3,1000))
 
 def simulateSeventhProblem(n: int):
     times = 0
@@ -115,7 +115,7 @@ def simulateSeventhProblem(n: int):
                 works = False
         if (works == True):
             return times
-print(simulateSeventhProblem(10))
+#print(simulateSeventhProblem(10))
 
 # average proportion to go 6-7 in valorant
 def simulateEigthProblem(trials : int) -> float:
@@ -134,4 +134,20 @@ def simulateEigthProblem(trials : int) -> float:
             NotSixSevens += 1
     return (SixSevens/(SixSevens+NotSixSevens))
 
-print (simulateEigthProblem(100000))
+#print (simulateEigthProblem(100000))
+
+def simulateChipProblem() -> float:
+    successes = 0
+    for i in range (1,1000):
+        chips = 2000
+        bets = 0
+        while chips > 0 and bets < 10000:
+            if random.random() < .6:
+                chips -= 1
+            else:
+                chips += 1
+            bets += 1
+        if bets == 10000: successes += 1
+        else: successes += 0
+    return (successes/1000)
+print(simulateChipProblem())
